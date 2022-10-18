@@ -1,12 +1,38 @@
 <h2>01 - Data Binding</h2>
 
 <h3>String Interpolation</h3>
+<p>Me llamo {{ nombre }}</p>
+<p>Se llama {{ getNombre() }} </p>
+<p>Hola {{ visitante ? visitante : 'Mundo' }}</p>
+<p>Hola {{ nombre2 }}</p>
+
+
+<div>
+  <p>{{producto.nombre}}</p>
+  <img [src]="producto.urlImagen" alt="Imagen del {{producto.nombre}}" width="100">
+  <!-- <img src="{{producto.urlImagen}}" alt="" width="100"> -->
+  <p>Precio: {{producto.precio}}</p>
+  <p>Stock: {{producto.stock}}</p>
+  <button type="button" (click)="comprarProducto()">Comprar 1 unidad</button>
+</div>
 
 
 <h3>Property Binding</h3>
 
+<input [type]="inputType" [placeholder]="getNombre()">
+
 
 <h3>Event Binding</h3>
 
+<button type="button" (click)="mostrarIntroBatman($event)">Muestra la intro de Batman</button>
+
+<input type="number" (change)="cambiarPrecioProducto($event)">
+
+<button type="button" (click)="resetNombre()">Resetear nombre</button>
+
 
 <h3>Two-Way Data Binding</h3>
+
+<input type="text" [(ngModel)]="nombre">
+
+<input type="text" [value]="nombre" (input)="cambiarNombre($event)">
