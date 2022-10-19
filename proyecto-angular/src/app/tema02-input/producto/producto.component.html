@@ -1,0 +1,7 @@
+<div>
+  <p>{{producto.nombre}}</p>
+  <img [src]="producto.urlImagen" alt="Imagen del {{producto.nombre}}" width="100">
+  <p>Precio: {{producto.precio}}</p>
+  <p>Stock: {{producto.stock}}</p>
+  <button type="button" (click)="comprarProducto()">Comprar 1 unidad</button>
+</div>

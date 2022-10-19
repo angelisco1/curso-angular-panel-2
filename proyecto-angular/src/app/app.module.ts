@@ -7,6 +7,9 @@ import { MiPrimerComponenteComponent } from './mi-primer-componente/mi-primer-co
 import { Tema01DataBindingComponent } from './tema01-data-binding/tema01-data-binding.component';
 import { Tema02InputComponent } from './tema02-input/tema02-input.component';
 import { SugusComponent } from './tema02-input/sugus/sugus.component';
+import { ProductoComponent } from './tema02-input/producto/producto.component';
+import { Tema03ReferenciasComponent } from './tema03-referencias/tema03-referencias.component';
+import { Tema04PipesComponent } from './tema04-pipes/tema04-pipes.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { SugusComponent } from './tema02-input/sugus/sugus.component';
     MiPrimerComponenteComponent,
     Tema01DataBindingComponent,
     Tema02InputComponent,
-    SugusComponent
+    SugusComponent,
+    ProductoComponent,
+    Tema03ReferenciasComponent,
+    Tema04PipesComponent
   ],
   imports: [
     BrowserModule,

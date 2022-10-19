@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductoType } from '../types/producto.types'
 
-type ProductoType = {
-  nombre: string,
-  precio: number,
-  stock: number | string,
-  urlImagen: string
-}
 
 @Component({
   selector: 'app-tema01-data-binding',
@@ -13,15 +8,9 @@ type ProductoType = {
   styleUrls: ['./tema01-data-binding.component.css']
 })
 export class Tema01DataBindingComponent implements OnInit {
-
   nombre: string = 'Ángel'
   visitante: string = ''
   private _nombre2: string = 'Charly'
-
-  // nombreProducto: string = 'One Plus 9'
-  // precio: number = 500
-  // stock: number = 15
-
   // string, number, boolean
   // Array<number> o number[]
   // {nombre: string, edad: number, dni: string}
@@ -33,6 +22,9 @@ export class Tema01DataBindingComponent implements OnInit {
     stock: '15',
     urlImagen: 'https://www.powerplanetonline.com/cdnassets/oneplus_9_pro_04_verde_ad_l_l.jpg',
   }
+  // nombreProducto: string = 'One Plus 9'
+  // precio: number = 500
+  // stock: number = 15
 
   get nombre2(): string {
     return this._nombre2

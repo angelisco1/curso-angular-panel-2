@@ -1,1 +1,13 @@
-<p>tema02-input works!</p>
+<h2>02 - @Input</h2>
+
+<app-sugus sabor="limón" color="yellow"></app-sugus>
+<!-- <app-sugus sabor="naranja" color="orange"></app-sugus>
+<app-sugus sabor="piña" color="blue"></app-sugus>
+<app-sugus [sabor]="sugusDeFresa.sabor" [color]="sugusDeFresa.color"></app-sugus> -->
+
+<input type="text" placeholder="Pon el sabor del sugus..." [(ngModel)]="customSugus.sabor">
+<input type="color" [(ngModel)]="customSugus.color">
+<app-sugus [sabor]="customSugus.sabor" [color]="customSugus.color"></app-sugus>
+
+<app-producto [producto]="onePlus9"></app-producto>
+<app-producto [producto]="tomateFrito"></app-producto>

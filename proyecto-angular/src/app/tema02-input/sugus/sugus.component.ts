@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sugus',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sugus.component.css']
 })
 export class SugusComponent implements OnInit {
+
+  @Input() sabor: string = ''
+  @Input() color: string = ''
 
   constructor() { }
 
