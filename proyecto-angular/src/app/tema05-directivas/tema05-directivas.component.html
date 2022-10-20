@@ -1,0 +1,58 @@
+<h2>05 - Directivas</h2>
+
+<h3>Directivas de atributo</h3>
+<!-- ngModel, ngStyle, ngClass... -->
+
+
+<h3>Directivas estructurales</h3>
+<!--
+<button type="button" (click)="toggleDarkMode(true)" *ngIf="!darkModeActivado">Activar: Dark mode 🌜</button>
+<button type="button" (click)="toggleDarkMode(false)" *ngIf="darkModeActivado">Activar: Light mode 🌞</button>
+-->
+
+<!--
+<button type="button" (click)="toggleDarkMode(true)" *ngIf="!darkModeActivado; else btnLightMode">Activar: Dark mode 🌜</button>
+<ng-template #btnLightMode>
+  <button type="button" (click)="toggleDarkMode(false)">Activar: Light mode 🌞</button>
+</ng-template>
+-->
+
+<div *ngIf="darkModeActivado; then btnLightMode else btnDarkMode"></div>
+
+<ng-template #btnDarkMode>
+  <button type="button" (click)="toggleDarkMode(true)">
+    Activar: Dark mode 🌜
+  </button>
+</ng-template>
+
+<ng-template #btnLightMode>
+  <button type="button" (click)="toggleDarkMode(false)">
+    Activar: Light mode 🌞
+  </button>
+</ng-template>
+
+<div>
+  <app-sugus *ngFor="let sugus of listaSugus" [color]="sugus.color" [sabor]="sugus.sabor"></app-sugus>
+</div>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Nº</th>
+      <th>Concepto</th>
+      <th>Cantidad</th>
+      <th>Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let datos of listaIngresosGastos; let pos = index; let ultimo = last; let primero = first; let par = even"
+      [ngClass]="{esPrimeraFila: primero, esUltimaFila: ultimo, esFilaPar: par, esFilaImpar: !par}">
+      <td>{{pos + 1}}</td>
+      <td>{{datos.concepto}}</td>
+      <td>{{datos.cantidad}}€</td>
+      <td>{{datos.fecha | date:'dd/MM/yyyy'}}</td>
+    </tr>
+  </tbody>
+</table>

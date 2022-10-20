@@ -3,4 +3,13 @@
 <p>{{nombre | titlecase}}</p>
 <p>{{fechaNacimiento | date:'dd/MMMM/yyyy'}}</p>
 <!-- 'dd/MM/yyyy' -> 03/05/1958 -->
-<p>{{descripcion}}</p>
+<p>{{descripcion | slice:0:180}}...</p>
+<p>{{precio | currency:'EUR'}}</p>
+<!-- <pre>{{obj | json}}</pre> -->
+<p>{{precio | suma:10 | currency:'EUR'}}</p>
+<!-- <p>{{precio | currency:'EUR' | suma:10}}</p> -->
+
+<p>{{descripcion | ocultarPalabras:['ipsum', 'minima']}}</p>
+<p>{{descripcion | ocultarPalabras:['ipsum', 'minima']:'-'}}</p>
+
+<pre>{{listaUsuarios | async | json}}</pre>

@@ -10,6 +10,9 @@ import { SugusComponent } from './tema02-input/sugus/sugus.component';
 import { ProductoComponent } from './tema02-input/producto/producto.component';
 import { Tema03ReferenciasComponent } from './tema03-referencias/tema03-referencias.component';
 import { Tema04PipesComponent } from './tema04-pipes/tema04-pipes.component';
+import { SumaPipe } from './tema04-pipes/pipes/suma.pipe';
+import { OcultarPalabrasPipe } from './tema04-pipes/pipes/ocultar-palabras.pipe';
+import { Tema05DirectivasComponent } from './tema05-directivas/tema05-directivas.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { Tema04PipesComponent } from './tema04-pipes/tema04-pipes.component';
     SugusComponent,
     ProductoComponent,
     Tema03ReferenciasComponent,
-    Tema04PipesComponent
+    Tema04PipesComponent,
+    SumaPipe,
+    OcultarPalabrasPipe,
+    Tema05DirectivasComponent
   ],
   imports: [
     BrowserModule,
