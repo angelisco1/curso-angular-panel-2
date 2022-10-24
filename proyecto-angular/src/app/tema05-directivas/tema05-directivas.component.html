@@ -47,7 +47,7 @@
   </thead>
   <tbody>
     <tr
-      *ngFor="let datos of listaIngresosGastos; let pos = index; let ultimo = last; let primero = first; let par = even"
+      *ngFor="let datos of listaIngresosGastos; let pos = index; let ultimo = last; let primero = first; let par = even;"
       [ngClass]="{esPrimeraFila: primero, esUltimaFila: ultimo, esFilaPar: par, esFilaImpar: !par}">
       <td>{{pos + 1}}</td>
       <td>{{datos.concepto}}</td>
@@ -56,3 +56,24 @@
     </tr>
   </tbody>
 </table>
+
+
+<select [(ngModel)]="idiomaSeleccionado">
+  <option value="">---</option>
+  <option *ngFor="let idioma of listaIdiomas" [value]="idioma.codigo">{{idioma.texto}}</option>
+</select>
+
+
+<div [ngSwitch]="idiomaSeleccionado">
+  <!--
+    <p *ngSwitchCase="'es'">El idioma seleccionado es Español</p>
+    <p *ngSwitchCase="'fr'">El idioma seleccionado es Francés</p>
+    <p *ngSwitchCase="'it'">El idioma seleccionado es Italiano</p>
+  -->
+
+  <ng-container *ngFor="let idioma of listaIdiomas">
+    <p *ngSwitchCase="idioma.codigo">El idioma seleccionado es {{idioma.texto}}</p>
+  </ng-container>
+
+  <p *ngSwitchDefault>No hay ningún idioma seleccionado</p>
+</div>

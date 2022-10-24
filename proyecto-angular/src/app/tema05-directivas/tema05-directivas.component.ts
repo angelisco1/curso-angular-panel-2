@@ -19,6 +19,13 @@ export class Tema05DirectivasComponent implements OnInit {
     { concepto: 'Burger King', cantidad: -26, fecha: new Date(2022, 8, 27) },
   ]
 
+  listaIdiomas = [
+    { codigo: 'es', texto: 'Español' },
+    { codigo: 'it', texto: 'Italiano' },
+    { codigo: 'fr', texto: 'Francés' },
+  ]
+  idiomaSeleccionado: string = 'it'
+
   constructor() { }
 
   ngOnInit(): void {
