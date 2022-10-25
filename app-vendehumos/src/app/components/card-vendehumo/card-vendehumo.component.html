@@ -2,5 +2,5 @@
   <p>{{vendehumo.nombre}}</p>
   <img [src]="vendehumo.imagen" alt="Foto de {{vendehumo.nombre}}" width="50">
   <p>Categoria: {{vendehumo.categoria}}</p>
-  <button>Votar ({{vendehumo.votos}} votos)</button>
+  <button (click)="votar()">Votar ({{vendehumo.votos}} votos)</button>
 </div>

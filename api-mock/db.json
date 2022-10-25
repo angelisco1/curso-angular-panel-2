@@ -1,0 +1,25 @@
+{
+  "vendehumos": [
+    {
+      "id": "id1",
+      "nombre": "A",
+      "categoria": "crypto",
+      "imagen": "https://xsgames.co/randomusers/assets/avatars/male/16.jpg",
+      "votos": 15
+    },
+    {
+      "id": "id2",
+      "nombre": "B",
+      "categoria": "desarrollo-personal",
+      "imagen": "https://xsgames.co/randomusers/assets/avatars/male/56.jpg",
+      "votos": 10
+    },
+    {
+      "nombre": "C",
+      "votos": 14,
+      "categoria": "trading",
+      "imagen": "https://xsgames.co/randomusers/assets/avatars/female/13.jpg",
+      "id": "rTRSvp1"
+    }
+  ]
+}

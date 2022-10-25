@@ -1,5 +1,5 @@
 export interface IVendehumo {
-  id: string,
+  id?: string,
   nombre: string,
   categoria: string,
   imagen: string,
