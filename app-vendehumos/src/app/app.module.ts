@@ -10,6 +10,8 @@ import { CardVendehumoComponent } from './components/card-vendehumo/card-vendehu
 import { FormVendehumoComponent } from './components/form-vendehumo/form-vendehumo.component';
 import { AppRoutingModule } from './app.routes';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InfoVendehumoComponent } from './pages/info-vendehumo/info-vendehumo.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     InicioComponent,
     MenuComponent,
     CardVendehumoComponent,
-    FormVendehumoComponent
+    FormVendehumoComponent,
+    InfoVendehumoComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

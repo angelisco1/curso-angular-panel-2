@@ -19,6 +19,10 @@ export class VendehumosService {
     return this.http.get(URL_API_VENDEHUMOS)
   }
 
+  getVendehumo(vendehumoId: string) {
+    return this.http.get(URL_API_VENDEHUMOS + '/' + vendehumoId)
+  }
+
   createVendehumo(nuevoVendehumo: VendehumoModel) {
     return this.http.post(URL_API_VENDEHUMOS, nuevoVendehumo)
   }

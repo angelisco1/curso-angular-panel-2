@@ -1,0 +1,9 @@
+.card-vh {
+  border: 1px solid black;
+  box-shadow: 10px 10px 10px black;
+  max-width: 160px;
+  min-width: 160px;
+  height: 230px;
+  text-align: center;
+  margin: 15px;
+}

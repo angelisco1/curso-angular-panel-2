@@ -1,15 +1,13 @@
 <h2>Añade a tu vendehumos preferido</h2>
 
-
-
-<form>
+<form [formGroup]="formVendehumo" (ngSubmit)="guardarVendehumo()">
   <div>
     <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre">
+    <input type="text" id="nombre" formControlName="nombre">
   </div>
   <div>
     <label for="categoria">Categoria:</label>
-    <select id="categoria">
+    <select id="categoria" formControlName="categoria">
       <option value="crypto">Crypto</option>
       <option value="desarrollo-personal">Desarrollo personal</option>
       <option value="trading">Trading</option>
@@ -17,11 +15,10 @@
   </div>
   <div>
     <label for="imagen">Imagen:</label>
-    <input type="text" id="imagen">
+    <input type="text" id="imagen" formControlName="imagen">
   </div>
 
-  <button type="submit">Añadir</button>
+  <button type="submit" [disabled]="formVendehumo.invalid">Añadir</button>
 </form>
-
 
 <!-- <button (click)="guardarVendehumo()">Crear nuevo vendehumo</button> -->
