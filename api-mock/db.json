@@ -62,6 +62,20 @@
       "imagen": "https://xsgames.co/randomusers/assets/avatars/male/34.jpg",
       "votos": 4,
       "id": "FMkXh6N"
+    },
+    {
+      "nombre": "aaaaaaa",
+      "categoria": "trading",
+      "imagen": "https://xsgames.co/randomusers/assets/avatars/female/16.jpg",
+      "votos": 0,
+      "id": "2vDOaLY"
+    },
+    {
+      "nombre": "pepito",
+      "categoria": "desarrollo-personal",
+      "imagen": "https://xsgames.co/randomusers/assets/avatars/female/16.jpg",
+      "votos": 0,
+      "id": "tK9YtiZ"
     }
   ]
 }

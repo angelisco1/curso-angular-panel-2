@@ -1,11 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { VendehumoModel } from '../models/vendehumo.model';
-import { IVendehumo } from '../types';
-
-
-// TODO: esto hay que ponerlo en las variables del proyecto
-const URL_API_VENDEHUMOS: string = 'http://localhost:3000/vendehumos'
 
 
 @Injectable({
@@ -16,19 +12,19 @@ export class VendehumosService {
   constructor(private http: HttpClient) { }
 
   getVendehumos() {
-    return this.http.get(URL_API_VENDEHUMOS)
+    return this.http.get(environment.URL_API_VENDEHUMOS)
   }
 
   getVendehumo(vendehumoId: string) {
-    return this.http.get(URL_API_VENDEHUMOS + '/' + vendehumoId)
+    return this.http.get(environment.URL_API_VENDEHUMOS + '/' + vendehumoId)
   }
 
   createVendehumo(nuevoVendehumo: VendehumoModel) {
-    return this.http.post(URL_API_VENDEHUMOS, nuevoVendehumo)
+    return this.http.post('http://localhost:3005/vendehumos', nuevoVendehumo, { headers: { 'Authorization': localStorage.getItem('token') || '' } })
   }
 
   updateVotosVendehumo(vendehumoId: string, votos: number) {
     const votosActualizados = { votos: votos + 1 }
-    return this.http.patch(URL_API_VENDEHUMOS + '/' + vendehumoId, votosActualizados)
+    return this.http.patch(environment.URL_API_VENDEHUMOS + '/' + vendehumoId, votosActualizados)
   }
 }

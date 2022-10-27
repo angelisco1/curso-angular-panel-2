@@ -1,0 +1,17 @@
+<h2>Logueate</h2>
+
+
+<form (ngSubmit)="login(formLogin)" #formLogin="ngForm">
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" [ngModel]="credenciales.email" required>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [ngModel]="credenciales.password" required minlength="8">
+  </div>
+
+  <button type="submit" [disabled]="formLogin.invalid">Login</button>
+
+</form>

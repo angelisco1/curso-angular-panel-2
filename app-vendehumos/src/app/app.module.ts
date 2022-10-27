@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app.routes';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InfoVendehumoComponent } from './pages/info-vendehumo/info-vendehumo.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ErrorComponent } from './pages/error/error.component';
     CardVendehumoComponent,
     FormVendehumoComponent,
     InfoVendehumoComponent,
-    ErrorComponent
+    ErrorComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
